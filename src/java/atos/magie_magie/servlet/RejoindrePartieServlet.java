@@ -33,7 +33,7 @@ public class RejoindrePartieServlet extends HttpServlet {
               
         service.rejoindrePartie(pseudo, avatar, partieId );
         
-        resp.sendRedirect("demarrerPartie.jsp");
+        resp.sendRedirect("demarrerPartie");
     }
 
     @Override

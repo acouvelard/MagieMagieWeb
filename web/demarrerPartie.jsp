@@ -24,7 +24,7 @@
         <article class="joueursEnnemis">
             <c:forEach items="${listeJoueurs}" var="joueurAct">
               <div class="joueurPartie">
-                <img src="images/${joueurAct.avatar}.jpg" alt="avatar">
+                <img src="images/${joueurAct.avatar}.jpg" alt="${joueurAct.avatar}">
                 <span>${joueurAct.pseudo}</span>
               </div>
             </c:forEach>

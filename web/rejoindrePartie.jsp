@@ -32,11 +32,11 @@
               </label>
               <label>
                 <input type="radio" name="choixAvatar" value="avatar2">
-                <img src="images/avatar1.jpg" alt="avatar">
+                <img src="images/avatar2.jpg" alt="avatar">
               </label>
               <label>
                 <input type="radio" name="choixAvatar" value="avatar3">
-                <img src="images/avatar1.jpg" alt="avatar">
+                <img src="images/avatar3.jpg" alt="avatar">
               </label>
             </div>
           </div>
