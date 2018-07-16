@@ -40,11 +40,11 @@ public class JoueurService {
         return joueurs;
     }
     
-    public Joueur choisirJoueurVictime (long joueurId) {
+    public Joueur recupJoueurViaId (long joueurId) {
         
-        Joueur joueurVictime = dao.recupererJoueurViaId(joueurId);
+        Joueur joueur = dao.recupererJoueurViaId(joueurId);
         
-        return joueurVictime;
+        return joueur;
     }
     
     public void sortInvisibilite (long partieId, Joueur joueurQuiALaMain) {

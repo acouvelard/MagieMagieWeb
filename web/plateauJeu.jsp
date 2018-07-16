@@ -16,61 +16,58 @@
     <body>
       <section id="plateauJeu" class="mainSection">
         <article>
-          <form action="listeDesParties.html" method="post"  class="radioAvatar">
-            <label class="joueurPartie">
-              <input type="radio" name="joueursEnnemis" value="nomJoueur1">
-              <img src="images/Sorcière.jpg" alt="avatar">
-              <span>NomJoueur</span>
+      <!--      <c:forEach items="${afficherEnnemis}" var="joueurAct">
+              <div class="joueurPartie" joueurId="${joueurAct.id}">
+                <img src="images/${joueurAct.avatar}.jpg" alt="avatar">
+                <span>${joueurAct.pseudo}</span>
+                <span>${joueurAct.cartes.size} cartes</span>
+              </div>
+            </c:forEach>-->
+            <div class="joueurPartie" joueurId="1">
+              <img src="images/avatar1.jpg" alt="avatar">
+              <span>j1</span>
               <span>2 cartes</span>
-            </label>
-            <label class="joueurPartie">
-              <input type="radio" name="joueursEnnemis" value="nomJoueur2">
-              <img src="images/Sorcière.jpg" alt="avatar">
-              <span>NomJoueur</span>
+            </div>
+            <div class="joueurPartie" joueurId="1">
+              <img src="images/avatar1.jpg" alt="avatar">
+              <span>j1</span>
               <span>2 cartes</span>
-            </label>
-            <label class="joueurPartie">
-             <input type="radio" name="joueursEnnemis" value="nomJoueur3">
-              <img src="images/Sorcière.jpg" alt="avatar">
-              <span>NomJoueur</span>
+            </div>
+            <div class="joueurPartie" joueurId="1">
+              <img src="images/avatar1.jpg" alt="avatar">
+              <span>j1</span>
               <span>2 cartes</span>
-            </label>
-          </form>
+            </div>
+
         </article>
 
         <article class="moi">
-          <div class="joueurPartie">
-            <img src="images/Sorcière.jpg" alt="avatar">
-            <span>NomJoueur</span>
-            <span>2 cartes</span>
-          </div>
-          <div class="boutons">
-            <button type="button" name="lancerSort">Lancer un sort</button>
-            <button type="button" name="passerSonTour">Passer le tour</button>
-          </div>
-  <!-- TODO: faire l'animation de selection des cartes avec JQuery -->
-          <div>
-            <form action="listeDesParties.html" method="post" class="checkCartes">
-              <label for="maCarte1">
-                <input type="checkbox" name="maCarte1" value="carte" checked id="maCarte1">
-                <img src="images/ingredients.png" alt="nomIgredient">
+
+            <form action="action" class="boutons">
+              <label>
+                <input type="radio" name="action" value="LancerSort">
+                <button type="button" >Lancer un sort</button>
               </label>
-              <label for="maCarte2">
-                <input type="checkbox" name="maCarte2" value="carte" id="maCarte2">
-                <img src="images/ingredients.png" alt="nomIgredient">
-              </label>
-              <label for="maCarte3">
-                <input type="checkbox" name="maCarte3" value="carte" id="maCarte3">
-                <img src="images/ingredients.png" alt="nomIgredient">
-              </label>
-              <label for="maCarte4">
-                <input type="checkbox" name="maCarte4" value="carte" id="maCarte4">
-                <img src="images/ingredients.png" alt="nomIgredient">
+              <label>
+                <input type="radio" name="action" value="PasserTour">
+                <button type="button" >Passer son tour</button>
               </label>
             </form>
+
+          <div>
+            <div class="checkCartes">
+      <!--      <c:forEach items="${mesCartes}" var="carteAct">
+                <img src="images/${carteAct.ingre}.jpg" alt="${carteAct.id}" >
+            </c:forEach>-->
+              <img src="images/ingredients.png" alt="ingre">
+              <img src="images/ingredients.png" alt="ingre">
+              <img src="images/ingredients.png" alt="ingre">
+              <img src="images/ingredients.png" alt="ingre">
+            </div>
           </div>
         </article>
 
       </section>
+      <c:import url="_LINKSCRIPT.jsp"></c:import>
     </body>
 </html>

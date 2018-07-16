@@ -66,7 +66,7 @@ public class PointEntree {
             System.out.print("Entrer le numeros de la victime : ");
             Scanner numVictime = new Scanner(System.in);
             int joueurVictimeId = numVictime.nextInt();
-            Joueur joueurVictime = joueurService.choisirJoueurVictime(joueurVictimeId);
+            Joueur joueurVictime = joueurService.recupJoueurViaId(joueurVictimeId);
 
             //Choix des deux cartes
             System.out.print("Entrer le num de la première carte : ");

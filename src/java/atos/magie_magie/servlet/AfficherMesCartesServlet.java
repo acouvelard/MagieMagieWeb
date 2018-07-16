@@ -5,6 +5,7 @@
  */
 package atos.magie_magie.servlet;
 
+import atos.magie_magie.services.JoueurService;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,16 +17,23 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Administrateur
  */
-@WebServlet(name = "RetourServlet", urlPatterns = {"/retour"})
-public class RetourServlet extends HttpServlet {
-
+@WebServlet(name = "AfficherMesCartesServlet", urlPatterns = {"/afficherCartes"})
+public class AfficherMesCartesServlet extends HttpServlet {
+    
+    private JoueurService service = new JoueurService();
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        req.getSession().invalidate();
 
-        resp.sendRedirect("listeParties");
+        long joueurId = (long) req.getSession().getAttribute("idJoueurMoi");
+        
+        req.setAttribute("mesCartes", service.afficherCartes(joueurId));
+        
+        req.getRequestDispatcher("plateauJeu.jsp").forward(req, resp);
         
     }
+
+
+
 
 }
