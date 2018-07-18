@@ -155,28 +155,9 @@ article.joueursEnnemis {
 
 img[alt="avatar"] {
   width: 125px;
-  height: 180px;
+  height: 165px;
   margin: 10px 20px;
   border : solid 3px #1a3868;
-}
-
-.radioAvatar {
-  display: flex;
-  flex-direction: row;
-}
-
-.radioAvatar input, .checkCartes input {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-}
-
-.radioAvatar input:checked + img {
-  border-color: #6d8bba;
-}
-
-.radioAvatar input:checked ~ span{
-  color: #6d8bba;
 }
 
 /*
@@ -221,6 +202,11 @@ img[alt="avatar"] {
   height: 70%;
 }
 
+#rejoindrePartie .radioAvatar {
+  display: flex;
+  flex-direction: row;
+}
+
 /*
   DEMARRER UNE PARTIE
 */
@@ -235,11 +221,11 @@ img[alt="avatar"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid 3px transparent;
 }
 
 .joueurPartie span {
-   margin-top: 10px;
-
+   margin: 10px 0;
 }
 
 /*
@@ -261,9 +247,8 @@ img[alt="avatar"] {
   display: flex;
   justify-content: space-around;
 }
-
-#plateauJeu article:first-child, #plateauJeu .radioAvatar label {
-  margin: 0;
+#plateauJeu .joueurPartie {
+  cursor: pointer;
 }
 
 #plateauJeu .moi {
@@ -278,7 +263,13 @@ img[alt="avatar"] {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 20%;
 }
+
+#plateauJeu .boutons label:first-child {
+  visibility: hidden;
+}
+
 #plateauJeu input {
   visibility: hidden;
 }
@@ -287,6 +278,7 @@ img[alt="avatar"] {
     width: 150px;
     font-size: 20px;
     margin: 25px 0;
+    cursor: pointer;
 }
 
 #plateauJeu .checkCartes {
@@ -294,24 +286,90 @@ img[alt="avatar"] {
    flex-direction: row;
    justify-content: center;
    flex-wrap: wrap;
+   width: 65%;
 }
 
 #plateauJeu .checkCartes img {
-  width: 75px;
-  height: 100px;
+  width: 90px;
+  height: 115px;
   margin: 10px 5px;
   border : solid 3px #1d4077;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#plateauJeu .checkCartes img:hover {
-  border : solid 3px red;
+
+#plateauJeu .checkCartes img:hover{
+  transform:scale(1.05);
+}
+
+#plateauJeu .joueurPartie:hover  {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*infobull sur les sorts*/
+
+#plateauJeu .listeSorts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d8bba;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: help;
+}
+#plateauJeu .listeSorts a {
+  color: lightgrey;
+  text-decoration: none;
+}
+#plateauJeu .listeSorts:hover div, .listeSorts:focus div{
+  transform: scale(1);
+}
+#plateauJeu .listeSorts a div {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  position: absolute;
+  bottom: 35px;
+  left: -10px;
+  height: 100px;
+  width: 410px;
+  border: solid 1px grey;
+  border-radius: 5px;
+  background-color: black;
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+#plateauJeu .listeSorts a div:after {
+  content: "▼";
+  color: grey;
+  position: absolute;
+  bottom: -16px;
+  left: 12px;
 }
 
 /*JS*/
-.joueurALaMain {
-  border-bottom: double 5px red;
+.aLaMain .infoJoueur {
+  border-bottom: solid 2px #e8ecf2;
 }
 .selectIngre {
-  border-color: yellow;
+  border-color: #6d8bba !important;
+  transform: scale(1.05);
+}
+.selectVict {
+  border-color: #6d8bba !important;
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.perdu {
+  opacity: 0.3;
+}
+.monJoueur {
+  border: solid 3px #e8ecf2 !important;
 }

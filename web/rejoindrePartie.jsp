@@ -26,18 +26,10 @@
             <input type="text" name="nomJoueur">
             <label for="avatarJoueur">Avatar</label>
             <div class="radioAvatar">
-              <label>
-                <input type="radio" name="choixAvatar" value="avatar1">
-                <img src="images/avatar1.jpg" alt="avatar">
-              </label>
-              <label>
-                <input type="radio" name="choixAvatar" value="avatar2">
-                <img src="images/avatar2.jpg" alt="avatar">
-              </label>
-              <label>
-                <input type="radio" name="choixAvatar" value="avatar3">
-                <img src="images/avatar3.jpg" alt="avatar">
-              </label>
+              <img src="images/avatar1.png" alt="avatar">
+              <img src="images/avatar2.png" alt="avatar">
+              <img src="images/avatar3.png" alt="avatar">
+              <img src="images/avatar4.png" alt="avatar">
             </div>
           </div>
           <button type="submit" name="creerNouvellePartie">Rejoindre la partie</button>
@@ -47,6 +39,6 @@
       <section class="buttonBottomLeft">
         <a href="<c:url value="retour"></c:url>"><button type="button" name="retourAuMenu">Revenir à la list des parties</button></a>
       </section>
-
+      <c:import url="_LINKSCRIPT.jsp"></c:import>
     </body>
 </html>
