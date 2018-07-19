@@ -1,5 +1,8 @@
 $(document).ready(function(e) {
 
+  /*Récupère l'id du joueur en session*/
+  var sessionJoueurId = "<%Session('idJoueurMoi')%>";
+
   /*REJOINDRE PARTIE IMG*/
   $('.radioAvatar img').click(function(e) {
     if ($('.monJoueur').length == 0) {
@@ -44,9 +47,15 @@ $(document).ready(function(e) {
     $('.sommeil .infoJoueur').append('En sommeil profond');
   }
 
-  /*A la main*/
+  /*A la main et cahce ou montre bouton passer son tour*/
   if ($('.joueurPartie').hasClass('aLaMain')) {
     $('.aLaMain .infoJoueur').append('A la main');
+
+    if (sessionJoueurId == $('div.joueurPartie').attr('joueurId')) {
+      $('.boutons label:last-child').css('visibility', 'visible');
+    }
+  } else {
+    $('.boutons label:last-child').css('visibility', 'hidden');
   }
 
   if ($('.joueurPartie').hasClass('perdu')) {

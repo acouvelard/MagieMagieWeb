@@ -21,23 +21,24 @@
                 <img src="images/${joueurAct.avatar}.jpg" alt="avatar">
                 <span>${joueurAct.pseudo}</span>
                 <span>${joueurAct.cartes.size} cartes</span>
+                <span class="infoJoueur"></span>
               </div>
             </c:forEach>-->
             <div class="joueurPartie aLaMain" joueurId="1">
               <img src="images/avatar1.png" alt="avatar"  class="monJoueur">
-              <span>j1</span>
+              <span>Richard</span>
               <span>15 cartes</span>
               <span class="infoJoueur"></span>
             </div>
             <div class="joueurPartie sommeil" joueurId="1">
               <img src="images/avatar2.png" alt="avatar">
-              <span>j1</span>
+              <span>Mariposa</span>
               <span>10 cartes</span>
               <span class="infoJoueur"></span>
             </div>
             <div class="joueurPartie perdu" joueurId="1">
               <img src="images/avatar3.png" alt="avatar">
-              <span>j1</span>
+              <span>Merlin</span>
               <span>0 cartes</span>
               <span class="infoJoueur"></span>
             </div>

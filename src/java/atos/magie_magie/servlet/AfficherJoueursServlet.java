@@ -5,10 +5,8 @@
  */
 package atos.magie_magie.servlet;
 
-import atos.magie_magie.entity.Joueur;
 import atos.magie_magie.services.JoueurService;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +31,7 @@ public class AfficherJoueursServlet extends HttpServlet {
         
         req.getRequestDispatcher("plateauJeu.jsp").forward(req, resp);
     }
-
+/*
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
@@ -43,7 +41,7 @@ public class AfficherJoueursServlet extends HttpServlet {
         
     }
     
-    
+ */   
     
     
 }
